@@ -39,3 +39,27 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 -- make current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+
+vim.keymap.set("n", "\\]", "<cmd>cn<CR>")
+vim.keymap.set("n", "\\[", "<cmd>cp<CR>")
+-- vim.keymap.set("n", "\n", "<cmd>cn<CR>")
+-- vim.keymap.set("n", "\p", "<cmd>cp<CR>")
+-- vim.keymap.set("n", "\o", "<cmd>copen<CR>")
+-- vim.keymap.set("n", "\c", "<cmd>cclose<CR>")
+-- vim.keymap.set("n", "\bq", "<cmd>b#<CR>")
+-- vim.keymap.set("n", "]<space>", "<cmd>ALENextWrap<CR>")
+-- vim.keymap.set("n", "[<space>", "<cmd>ALEPreviousWrap<CR>")
+
+-- Tabs
+vim.keymap.set("n", "tbn", "<cmd>tabnext<CR>")
+vim.keymap.set("n", "tbp", "<cmd>tabprev<CR>")
+vim.keymap.set("n", "tbe", "<cmd>tabedit<SPACE>")
+
+-- BUFFERS
+vim.keymap.set("n", "gn", "<cmd>bn<CR>")
+vim.keymap.set("n", "gp", "<cmd>bp<CR>")
+vim.keymap.set("n", "gd", "<cmd>bd<CR>")
+
+vim.keymap.set("n", "Q",  "@q")
+vim.keymap.set("n", "Y", "y$")
