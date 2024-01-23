@@ -10,7 +10,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
 	-- Replace the language servers listed here 
 	-- with the ones you want to install
-	ensure_installed = {'lua_ls'},
+	ensure_installed = {'lua_ls', 'gopls'},
 	handlers = {
 		lsp.default_setup,
 	},
@@ -27,6 +27,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
 })
+
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 

@@ -59,4 +59,10 @@ return require('packer').startup(function(use)
     use('tpope/vim-surround')
     -- TODO not working
     use('luochen1990/rainbow')
+
+    use('sainnhe/sonokai')
+    use('windwp/nvim-ts-autotag')
+    use('jiangmiao/auto-pairs')
+    use('tpope/vim-surround')
+    use('norcalli/nvim-colorizer.lua')
 end)

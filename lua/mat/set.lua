@@ -34,3 +34,6 @@ vim.opt.colorcolumn = "80"
 
 vim.opt.splitright = true
 vim.opt.splitbelow = true
+
+vim.opt.termguicolors = true
+vim.opt.clipboard = 'unnamedplus'
