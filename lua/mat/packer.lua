@@ -18,9 +18,9 @@ return require('packer').startup(function(use)
     use("nvim-treesitter/nvim-treesitter-context");
 
 
-    use('theprimeagen/harpoon')
-    use('mbbill/undotreetheprimeagen/harpoon')
-    use('tpope/vim-fugitive')
+    use('theprimeagen/harpoon') -- duh
+    use('mbbill/undotree') -- undo tree
+    use('tpope/vim-fugitive') -- for github stuff
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- trouble shooting plugin
     use({
         "folke/trouble.nvim",
         config = function()
@@ -55,14 +56,11 @@ return require('packer').startup(function(use)
             }
         end
     })
-    use("folke/zen-mode.nvim")
-    use('tpope/vim-surround')
-    -- TODO not working
-    use('luochen1990/rainbow')
-
-    use('sainnhe/sonokai')
-    use('windwp/nvim-ts-autotag')
-    use('jiangmiao/auto-pairs')
-    use('tpope/vim-surround')
-    use('norcalli/nvim-colorizer.lua')
+    use("folke/zen-mode.nvim") -- exactly what it sounds like
+    use('tpope/vim-surround')  -- useful for bracket control
+    use('luochen1990/rainbow') -- TODO not working
+    use('sainnhe/sonokai') -- color scheme
+    use('windwp/nvim-ts-autotag') -- for auto html stuff
+    -- use('jiangmiao/auto-pairs') -- for auto bracket pairs
+    use('norcalli/nvim-colorizer.lua') -- for colors (like hex and stuff)
 end)
