@@ -18,9 +18,10 @@ return require('packer').startup(function(use)
     use("nvim-treesitter/nvim-treesitter-context");
 
 
-    use('theprimeagen/harpoon') -- duh
-    use('mbbill/undotree') -- undo tree
-    use('tpope/vim-fugitive') -- for github stuff
+    use('theprimeagen/harpoon')
+    use('mbbill/undotreetheprimeagen/harpoon')
+    use('tpope/vim-fugitive')
+    use('tpope/vim-repeat') -- smart repeats of plugins
 
     use {
         'VonHeikemen/lsp-zero.nvim',
