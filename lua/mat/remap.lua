@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<leader>e', vim.diagnostic.goto_next, opts)
+
 vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
 
 -- Moving lines

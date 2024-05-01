@@ -66,3 +66,4 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+-- vim.api.nvim_set_hl(0, '@lsp.type.comment.cpp', {})
