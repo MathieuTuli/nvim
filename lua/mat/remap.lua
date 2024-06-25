@@ -68,3 +68,9 @@ vim.keymap.set("n", "Y", "y$")
 
 -- vim.keymap.set("i", "<C-y>", "<C-k>")
 vim.keymap.set("i", "<C-k>", "<Nop>")
+
+-- notes
+vim.keymap.set("n", "<leader>ok", ":!ng '%:p'<cr>:bd<cr>")
+vim.keymap.set("n", "<leader>odd", ":!rm '%:p'<cr>:bd<cr>")
+vim.keymap.set("n", "<leader>of", ":s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<cr>")
+vim.keymap.set("n", "<leader>on", ":ObsidianTemplate note<cr> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<cr>")
