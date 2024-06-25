@@ -36,3 +36,4 @@ vim.opt.splitbelow = true
 
 vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.conceallevel = 2
