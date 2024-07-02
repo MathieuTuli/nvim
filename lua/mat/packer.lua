@@ -154,4 +154,5 @@ return require('packer').startup(function(use)
             })
             end
         })
+    use({'MunifTanjim/nui.nvim'})
 end)

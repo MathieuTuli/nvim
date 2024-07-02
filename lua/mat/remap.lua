@@ -6,6 +6,11 @@ vim.keymap.set("n", "gn", "<cmd>bn<CR>")
 vim.keymap.set("n", "gp", "<cmd>bp<CR>")
 vim.keymap.set("n", "gd", "<cmd>bd<CR>")
 
+-- DEV
+vim.keymap.set("n", "<leader>l", ":luafile %<CR>")
+vim.keymap.set("i", "<leader>l", ":luafile %<CR>")
+vim.keymap.set("v", "<leader>l", ":luafile %<CR>")
+
 -- FILE NAV
 vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
 
@@ -65,5 +70,4 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- vim.keymap.set("n", "J", "mzJ`z")
 -- vim.keymap.set("n", "n", "nzzzv")
 -- vim.keymap.set("n", "N", "Nzzzv")
-
 
