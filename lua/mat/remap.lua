@@ -8,7 +8,7 @@ vim.keymap.set("n", "gd", "<cmd>bd<CR>")
 
 -- DEV
 vim.keymap.set("n", "<leader>l", ":luafile %<CR>")
-vim.keymap.set("i", "<leader>l", ":luafile %<CR>")
+-- vim.keymap.set("i", "<leader>l", ":luafile %<CR>")
 vim.keymap.set("v", "<leader>l", ":luafile %<CR>")
 
 -- FILE NAV
