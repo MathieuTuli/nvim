@@ -7,9 +7,7 @@ vim.keymap.set("n", "gp", "<cmd>bp<CR>")
 vim.keymap.set("n", "gd", "<cmd>bd<CR>")
 
 -- DEV
-vim.keymap.set("n", "<leader>l", ":luafile %<CR>")
--- vim.keymap.set("i", "<leader>l", ":luafile %<CR>")
-vim.keymap.set("v", "<leader>l", ":luafile %<CR>")
+-- vim.keymap.set({'n', 'v'}, '<leader>l', [[:<C-u>luafile %<CR>]], { noremap = true, silent = true })
 
 -- FILE NAV
 vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
@@ -51,7 +49,7 @@ vim.keymap.set("i", "<C-k>", "<Nop>")
 vim.keymap.set("n", "<leader>ok", ":!ng '%:p'<CR>:bd<CR>")
 vim.keymap.set("n", "<leader>odd", ":!rm '%:p'<CR>:bd<CR>")
 vim.keymap.set("n", "<leader>of", ":s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<CR>:noh<CR>")
-vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate note<CR> :lua vim.cmd([[1,/^\\S/s/^\\n\\{1,}//]])<CR>")
+vim.keymap.set("n", "<leader>ot", ":ObsidianTemplate note<CR>dd:s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<CR>:noh<CR>")
 vim.keymap.set("n", "<leader>on", ":!nn<SPACE>")
 
 -- TABS

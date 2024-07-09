@@ -154,5 +154,7 @@ return require('packer').startup(function(use)
             })
             end
         })
-    use({'MunifTanjim/nui.nvim'})
+    use({'MathieuTuli/jarvis.nvim',
+        requires = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' },
+    })
 end)
