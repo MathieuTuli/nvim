@@ -36,4 +36,6 @@ vim.opt.splitbelow = true
 
 vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 0
+-- vim.opt.statusline=[[%f #%{bufnr('%')} %l:%c]]
+vim.opt.statusline=[[%f%m %r%=#%{bufnr('%')} %l:%c (%p%%)]]
