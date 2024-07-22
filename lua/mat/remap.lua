@@ -6,6 +6,12 @@ vim.keymap.set("n", "gn", "<cmd>bn<CR>")
 vim.keymap.set("n", "gp", "<cmd>bp<CR>")
 vim.keymap.set("n", "gd", "<cmd>bd<CR>")
 
+-- COLORS
+vim.keymap.set('n', '<leader>bl', ':set background=light<CR>',
+{ noremap = true, silent = true })
+vim.keymap.set('n', '<leader>bd', ':set background=dark<CR>',
+{ noremap = true, silent = true })
+
 -- DEV
 -- vim.keymap.set({'n', 'v'}, '<leader>l', [[:<C-u>luafile %<CR>]], { noremap = true, silent = true })
 

@@ -60,7 +60,10 @@ return require('packer').startup(function(use)
     use("folke/zen-mode.nvim") -- exactly what it sounds like
     use('tpope/vim-surround')  -- useful for bracket control
     use('luochen1990/rainbow') -- TODO not working
-    use('sainnhe/sonokai') -- color scheme
+    -- color scheme
+    use('sainnhe/sonokai')
+    use('MathieuTuli/alabaster-contrast')
+
     use('windwp/nvim-ts-autotag') -- for auto html stuff
     -- use('jiangmiao/auto-pairs') -- for auto bracket pairs
     use('norcalli/nvim-colorizer.lua') -- for colors (like hex and stuff)
@@ -89,10 +92,13 @@ return require('packer').startup(function(use)
     use("nvim-lua/plenary.nvim")
     use({
         "epwalsh/obsidian.nvim",
-        tag = "*",
+        tag = "*",  -- recommended, use latest release instead of latest commit
         ft = "markdown",
         requires = {
+            -- Required.
             "nvim-lua/plenary.nvim",
+
+            -- see below for full list of optional dependencies 👇
         },
         config = function()
             require("obsidian").setup({
@@ -102,10 +108,8 @@ return require('packer').startup(function(use)
                         path = "~/notes",
                     },
                 },
-
                 notes_subdir = "hippo",
                 new_notes_location = "notes_subdir",
-
                 conceallevel=2,
                 disable_frontmatter = true,
                 templates = {
@@ -113,24 +117,6 @@ return require('packer').startup(function(use)
                     date_format = "%Y-%m-%d",
                     time_format = "%H:%M:%S",
                 },
-
-                -- name new notes starting the ISO datetime and ending with note name
-                -- put them in the inbox subdir
-                -- note_id_func = function(title)
-                    --   local suffix = ""
-                    --   -- get current ISO datetime with -5 hour offset from UTC for EST
-                    --   local current_datetime = os.date("!%Y-%m-%d-%H%M%S", os.time() - 5*3600)
-                    --   if title ~= nil then
-                    --     suffix = title:gsub(" ", "-"):gsub("[^A-Za-z0-9-]", ""):lower()
-                    --   else
-                    --     for _ = 1, 4 do
-                    --       suffix = suffix .. string.char(math.random(65, 90))
-                    --     end
-                    --   end
-                    --   return current_datetime .. "_" .. suffix
-                    -- end,
-
-                    -- key mappings, below are the defaults
                 mappings = {
                     -- overrides the 'gf' mapping to work on markdown/wiki links within your vault
                     ["gf"] = {
@@ -139,21 +125,16 @@ return require('packer').startup(function(use)
                         end,
                         opts = { noremap = false, expr = true, buffer = true },
                     },
-                    -- toggle check-boxes
-                    -- ["<leader>ch"] = {
-                        --   action = function()
-                            --     return require("obsidian").util.toggle_checkbox()
-                            --   end,
-                            --   opts = { buffer = true },
-                            -- },
-                    },
-                    completion = {
-                        nvim_cmp = true,
-                        min_chars = 2,
-                    },
+                },
+                completion = {
+                    nvim_cmp = true,
+                    min_chars = 2,
+                },
+
+                -- see below for full list of options 👇
             })
-            end
-        })
+        end,
+    })
     use({'MathieuTuli/jarvis.nvim',
         requires = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' },
     })

@@ -15,7 +15,8 @@ vim.opt.smartindent = true
 vim.opt.wrap = true
 
 vim.opt.swapfile = false
-vim.opt.backup = false vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
 vim.opt.hlsearch = true
@@ -38,4 +39,4 @@ vim.opt.termguicolors = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.conceallevel = 0
 -- vim.opt.statusline=[[%f #%{bufnr('%')} %l:%c]]
-vim.opt.statusline=[[%f%m %r%=#%{bufnr('%')} %l:%c (%p%%)]]
+vim.opt.statusline = [[%f%m %r%=#%{bufnr('%')} %l:%c (%p%%)]]
