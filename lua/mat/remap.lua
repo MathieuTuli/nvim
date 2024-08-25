@@ -63,6 +63,10 @@ vim.keymap.set("n", "tbn", "<cmd>tabnext<CR>")
 vim.keymap.set("n", "tbp", "<cmd>tabprev<CR>")
 vim.keymap.set("n", "tbe", ":tabedit<SPACE>")
 
+-- TEMPLATES
+vim.keymap.set("n", "<leader>ct", [[:let root=stdpath("config") | let ext=expand("%:e") | let x=expand(root .. "/templates/" .. ext .. "." .. ext) | r `=x`<CR>]])
+
+
 -- TODO TMUX
 -- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
@@ -74,4 +78,3 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- vim.keymap.set("n", "J", "mzJ`z")
 -- vim.keymap.set("n", "n", "nzzzv")
 -- vim.keymap.set("n", "N", "Nzzzv")
-
