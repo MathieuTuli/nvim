@@ -138,4 +138,54 @@ return require('packer').startup(function(use)
     use({'MathieuTuli/jarvis.nvim',
         requires = { 'nvim-lua/plenary.nvim', 'MunifTanjim/nui.nvim' },
     })
-end)
+    use({
+        "yetone/avante.nvim",
+        requires = {
+            "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+            "stevearc/dressing.nvim",
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+            --- The below is optional, make sure to setup it properly if you have lazy=true
+        },
+        config = function()
+            require("avante").setup({
+                provider="claude",
+                claude = {
+                    endpoint = "https://api.anthropic.com",
+                    model = "claude-3-5-sonnet-20240620",
+                    temperature = 0,
+                    max_tokens = 4096,
+                },
+                opts = {
+                    -- add any opts here
+                },
+                mappings = {
+                    ask = "<leader>la",
+                    edit = "<leader>le",
+                    refresh = "<leader>lr",
+                    --- @class AvanteConflictMappings
+                    diff = {
+                        ours = "co",
+                        theirs = "ct",
+                        none = "c0",
+                        both = "cb",
+                        next = "]x",
+                        prev = "[x",
+                    },
+                    jump = {
+                        next = "]]",
+                        prev = "[[",
+                    },
+                    submit = {
+                        normal = "<CR>",
+                        insert = "<C-s>",
+                    },
+                    toggle = {
+                        debug = "<leader>ld",
+                        hint = "<leader>lh",
+                    },
+                }
+            })
+            end,
+        })
+    end)
