@@ -105,7 +105,7 @@ return require('packer').startup(function(use)
                 workspaces = {
                     {
                         name = "notes",
-                        path = "~/notes",
+                        path = "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Notes",
                     },
                 },
                 notes_subdir = "hippo",
@@ -188,4 +188,5 @@ return require('packer').startup(function(use)
             })
             end,
         })
+    use({"itchyny/calendar.vim"})
     end)
