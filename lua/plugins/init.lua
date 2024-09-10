@@ -121,6 +121,7 @@ return {
                     hint = "<leader>lh",
                 },
             },
+            windows = { position = "bottom" },
         },
         -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
         build = "make",
