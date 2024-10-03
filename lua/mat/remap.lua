@@ -16,7 +16,8 @@ vim.keymap.set('n', '<leader>bd', ':set background=dark<CR>',
 -- vim.keymap.set({'n', 'v'}, '<leader>l', [[:<C-u>luafile %<CR>]], { noremap = true, silent = true })
 
 -- FILE NAV
-vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>ff", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ff", ":NERDTree<CR>")
 
 -- FORMATTING
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
