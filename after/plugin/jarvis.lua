@@ -111,20 +111,20 @@ local function anthropic_data_handler(data_stream, event_state)
     end
 end
 
--- require("jarvis").setup({
---     -- defaults
---     data_handler=data_handler,
---     make_curl_args=make_mlx_llm_curl_args,
---     -- prune_after = 30,
---     -- cache_limit = 1000,
---     -- keymaps = {
---     --     close = "<esc>", -- close the ui
---     --     new_chat = "<C-n>", -- create new persistent, file-agnostic chat file
---     --     switch_window = "<C-s>", -- switch between prompt and history window
---     --     run = "<C-e>", -- run model
---     --     copy_and_close = "<C-y>" -- copy visual selection in history window and close
---     -- },
--- })
--- 
--- vim.keymap.set({ 'n', 'v' }, '<leader>lc', function() require("jarvis").interact("chat") end, { desc = 'ask jarvis' })
--- vim.keymap.set({ 'n', 'v' }, '<leader>la', function() require("jarvis").interact("prompt") end, { desc = 'ask jarvis' })
+require("jarvis").setup({
+    -- defaults
+    data_handler=data_handler,
+    make_curl_args=make_mlx_llm_curl_args,
+    -- prune_after = 30,
+    -- cache_limit = 1000,
+    -- keymaps = {
+    --     close = "<esc>", -- close the ui
+    --     new_chat = "<C-n>", -- create new persistent, file-agnostic chat file
+    --     switch_window = "<C-s>", -- switch between prompt and history window
+    --     run = "<C-e>", -- run model
+    --     copy_and_close = "<C-y>" -- copy visual selection in history window and close
+    -- },
+})
+
+vim.keymap.set({ 'n', 'v' }, '<leader>lc', function() require("jarvis").interact("chat") end, { desc = 'ask jarvis' })
+vim.keymap.set({ 'n', 'v' }, '<leader>la', function() require("jarvis").interact("prompt") end, { desc = 'ask jarvis' })
