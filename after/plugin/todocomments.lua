@@ -14,6 +14,7 @@ require('todo-comments').setup(
         NOTE = { icon = " ", color = "#8ebeec", alt = { "INFO" } },
         DONE = { icon = " ", color = "#6d6d6d" },
         REVISIT = { icon = "! ", color = "#d13e23" },
+        UNCOMMENT = { icon = "# ", color = "#4f4f4f" },
         TEST = { icon = "- ", color = "#9d9d9d", alt = { "TESTING", "PASSED", "FAILED" } },
     },
     colors = {
