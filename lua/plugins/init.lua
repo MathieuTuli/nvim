@@ -103,6 +103,16 @@ return {
         version = false,
         opts = {
             -- add any opts here
+            provider = "claude",
+            auto_suggestions_provider = "claude",
+            cursor_applying_provider = nil, -- The provider used in the applying phase of Cursor Planning Mode, defaults to nil, when nil uses Config.provider as the provider for the applying phase
+            claude = {
+                endpoint = "https://api.anthropic.com",
+                -- model = "claude-3-7-sonnet-20250219",
+                model = "claude-3-5-sonnet-20241022",
+                temperature = 0,
+                max_tokens = 4096,
+            },
             mappings = {
                 ask = "<leader>la",
                 edit = "<leader>le",
@@ -147,7 +157,7 @@ return {
             "MunifTanjim/nui.nvim",
             --- The below dependencies are optional,
             "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-            "zbirenbaum/copilot.lua", -- for providers='copilot'
+            -- "zbirenbaum/copilot.lua", -- for providers='copilot'
             {
                 -- support for image pasting
                 "HakonHarnes/img-clip.nvim",

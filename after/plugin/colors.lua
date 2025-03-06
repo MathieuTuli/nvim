@@ -1,4 +1,5 @@
 function ColorMyPencils()
+    vim.g.alabaster_dim_comments = true
     vim.cmd.colorscheme("alabaster")
     vim.opt.background = "dark"
 

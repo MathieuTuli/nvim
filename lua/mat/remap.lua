@@ -11,6 +11,10 @@ vim.keymap.set('n', '<leader>bl', ':set background=light<CR>',
 { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>bd', ':set background=dark<CR>',
 { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>bt', function()
+    vim.g.alabaster_dim_comments = not vim.g.alabaster_dim_comments
+    vim.cmd('colorscheme alabaster')
+end, { noremap = true, silent = true })
 
 -- DEV
 -- vim.keymap.set({'n', 'v'}, '<leader>l', [[:<C-u>luafile %<CR>]], { noremap = true, silent = true })
