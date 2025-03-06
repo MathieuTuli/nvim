@@ -1,7 +1,7 @@
 function ColorMyPencils()
     vim.g.alabaster_dim_comments = true
-    vim.cmd.colorscheme("alabaster")
     vim.opt.background = "dark"
+    vim.cmd.colorscheme("alabaster")
 
     -- vim.g.sonokay_style = "andromeda"
     -- vim.g.sonokai_better_performance=1
