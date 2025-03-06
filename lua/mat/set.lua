@@ -24,6 +24,7 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+vim.g.alabaster_dim_comments = true
 
 vim.opt.scrolloff = 0
 vim.opt.signcolumn = "yes"
