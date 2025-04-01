@@ -1,10 +1,11 @@
 return {
     'wbthomason/packer.nvim',
     {
-        'nvim-telescope/telescope.nvim', version = '0.1.5',
+        'nvim-telescope/telescope.nvim',
+        version = '0.1.5',
         dependencies = { { 'nvim-lua/plenary.nvim' } }
     },
-    {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
     'nvim-treesitter/playground',
     "nvim-treesitter/nvim-treesitter-context",
     'theprimeagen/harpoon',
@@ -31,7 +32,7 @@ return {
     },
 
     -- trouble shooting plugin
-    {"folke/trouble.nvim", opts = {icons = false}},
+    { "folke/trouble.nvim",              opts = { icons = false } },
     "folke/zen-mode.nvim",
     'tpope/vim-surround',
     'luochen1990/rainbow', -- TODO not working
@@ -39,7 +40,7 @@ return {
     'sainnhe/sonokai',
     'MathieuTuli/alabaster-contrast',
 
-    'windwp/nvim-ts-autotag', -- for auto html stuff
+    'windwp/nvim-ts-autotag',      -- for auto html stuff
     'norcalli/nvim-colorizer.lua', -- for colors (like hex and stuff)
 
     "nvim-lua/plenary.nvim",
@@ -59,7 +60,7 @@ return {
             },
             notes_subdir = "hippo",
             new_notes_location = "notes_subdir",
-            conceallevel=2,
+            conceallevel = 2,
             disable_frontmatter = true,
             templates = {
                 subdir = "templates",
@@ -103,7 +104,7 @@ return {
         version = false,
         opts = {
             -- add any opts here
-            provider = "claude",
+            provider = "claude",            -- "openai",
             auto_suggestions_provider = "claude",
             cursor_applying_provider = nil, -- The provider used in the applying phase of Cursor Planning Mode, defaults to nil, when nil uses Config.provider as the provider for the applying phase
             claude = {
@@ -112,6 +113,14 @@ return {
                 model = "claude-3-5-sonnet-20241022",
                 temperature = 0,
                 max_tokens = 4096,
+            },
+            openai = {
+                endpoint = "https://api.openai.com/v1",
+                model = "gpt-4o",             -- your desired model (or use gpt-4o, etc.)
+                timeout = 30000,              -- Timeout in milliseconds, increase this for reasoning models
+                temperature = 0,
+                max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+                --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
             },
             mappings = {
                 ask = "<leader>la",
@@ -146,7 +155,7 @@ return {
                     hint = "<leader>lh",
                 },
             },
-            windows = { position = "bottom" },
+            windows = { position = "right" },
         },
         -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
         build = "make",
