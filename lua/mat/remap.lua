@@ -46,6 +46,8 @@ end, {})
 vim.keymap.set("n", "gn", "<cmd>bn<CR>")
 vim.keymap.set("n", "gp", "<cmd>bp<CR>")
 vim.keymap.set("n", "gd", "<cmd>bd<CR>")
+-- goto def
+vim.keymap.set("n", "gt", vim.lsp.buf.definition, { desc = "Go to Definition" })
 
 -- COLORS
 vim.keymap.set('n', '<leader>bl', ':set background=light<CR>',
